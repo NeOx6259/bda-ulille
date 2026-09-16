@@ -1,0 +1,525 @@
+@charset "utf-8";
+
+*
+{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin:0px;  /* fixe la marge extérieur a 0*/
+  font-family: Arial;
+
+}
+
+
+.burger{
+  display: none; /* display none fait siparraitre un élement */
+}
+
+.conteneur {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+/*header*/
+header {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+header img {
+  width: auto;
+  height: 140px;
+}
+
+#texte1 {
+  font-size: 50px;
+  color: #000000;
+  font-family: Arial;
+  text-align: center;
+}
+#logo {
+  text-align: left; /* text-align permet de positionner un bloc horizontalement*/
+  width: 10%
+}
+
+
+/*body*/
+body  {
+
+  background: #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size:cover; /* couvre toute la page */
+  height: 100%;
+  padding-left:50px;  /* fixe la marge interieur a 0*/
+  padding-right:50px;
+}
+
+/*nav PC*/
+.non_menu{
+  display: none;
+}
+.logo-menu {
+  text-align: center;
+  line-height: 0;
+  margin-top: 5px;
+}
+
+.logo-menu img {
+  width: 15%;
+  display: block;
+  margin: 0 auto;
+}
+
+.logo-menu nav {
+  margin: 0;
+}
+nav {
+  width: 100%;
+  margin: 0;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  font-weight: bold;
+
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;          /* Remplace float: left */
+  margin: 0;
+  padding: 0px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+nav ul li {
+  flex: 1;                /* Remplace width: 16.6% — chaque élément prend la même place */
+  text-align: center;
+  position: relative;
+
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  border-bottom: 2px solid transparent;
+  padding: 10px 0px;
+}
+nav li {
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  display: flex;
+
+}
+
+nav > ul li:hover .sous {
+  display: block;
+}
+
+
+.sous li{
+  float: none;
+  width: 100%;
+  text-align: left;
+  border-right: none;
+}
+.sous a{
+  border-bottom: none;
+  padding: 10px;
+
+}
+.sous a:hover{
+  border-bottom: none;
+
+}
+
+.bloc_texte{
+  margin-left:10% ;
+  width: 80%;
+  background-color: rgba(0,0,0,0.85); /* 0.85= transparence*/
+  font-size: 18px;
+  color: #FFFFFF;
+  border-radius: 20px;
+  padding: 1%;
+  font-family: 'robotolight';
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.tabulation{
+  text-align: center;
+  font-size: 18px;
+  color: #FFFFFF;
+  font-family: 'robotolight';
+
+}
+.class1{
+
+}
+.img_centrer{
+  width: 20%; /* Ajuste la largeur pour que 5 images tiennent sur une ligne */
+  height: auto;
+  margin: 0; /* Supprime toute marge */
+  padding: 0; /* Supprime tout padding */
+  border: none; /* Supprime toute bordure éventuelle */
+  margin-top: 25px;
+
+
+}
+.timeline{
+  width: 75%; /* Ajuste la largeur pour que 5 images tiennent sur une ligne */
+  height: auto;
+   /* Supprime toute marge */
+  padding: 0; /* Supprime tout padding */
+   /* Supprime toute bordure éventuelle */
+  margin-top: 25px;
+  margin-left: 12.5% ;
+}
+.test{
+  border: solid;
+}
+.FAQ{
+  margin: auto;
+  margin-top: 25px;
+  text-align: center;
+}
+.Question{
+  font-size: 30px; /* grandeur écriture*/
+  color: #BF3F39; /* couleur police*/
+  font-family: 'Brush Script MT';
+
+}
+.img_75{
+  width: 50%; /* Ajuste la largeur pour que 5 images tiennent sur une ligne */
+  height: auto;
+  display: block;
+  margin: auto; /* Supprime toute marge */
+  margin-top: 25px;
+}
+
+.Reponse{
+  display: none;
+  color: #BF3F39; /* couleur police*/
+
+
+}
+.FAQ:hover .Reponse{
+  display: block;
+
+}
+.bloc {
+  display: flex;
+  width: 100%;
+}
+
+.test1{
+  width: 75%;
+  font-size: 20px;
+  line-height: 1.8;
+  display: flex;
+
+  align-items: center;
+  text-align: justify;
+}
+
+.test1 {
+  padding: 20px;
+
+}
+.test1 span{
+  text-align: center;
+}
+
+.test2 {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.test2 img {
+  width: 100%;
+  height: auto;
+}
+
+.form{
+  width: 100%;
+  height: 650px;
+  margin: 0;
+  border: 0;
+
+}
+.Liens{
+  text-decoration:none; /* enlève le soulignement */
+  color: #BF3F39;
+  border-bottom: 2px solid transparent;
+  font-weight: bold;
+}
+
+
+
+/*footer*/
+footer {
+  margin-top: auto;
+  width: 100%;
+  background-color: #FFAC81;
+  color: #BF3F39;
+}
+
+.footer_contenu {
+
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo principal */
+.footer_logo img {
+  width: 150px;
+  height: auto;
+
+}
+
+/* Informations */
+.footer_infos {
+  text-align: center;
+}
+
+.footer_infos p {
+  margin: 8px 0;
+}
+
+.footer_infos a {
+  color: #BF3F39;
+  text-decoration: none;
+}
+
+/* Les deux autres logos */
+.footer_logos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.footer_logos img {
+  width: 75px;
+  height: auto;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+  /* ── MENU ── */
+  .menu_pc { display: none; }        /* Cache le menu PC */
+  .non_menu { display: block; }      /* Affiche le menu burger */
+
+  /* Bouton burger */
+  .burger {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    z-index: 99999;
+    cursor: pointer;
+  }
+
+  /* Les 3 barres du burger */
+  .burger .icon,
+  .burger .icon:before,
+  .burger .icon:after {
+    position: relative;
+    height: 4px;
+    width: 35px;
+    background-color: #FF5E00;
+    display: block;
+    border-radius: 2px;
+  }
+  .burger .icon:before,
+  .burger .icon:after {
+    content: "";
+    position: absolute;
+  }
+  .burger .icon:before { top: -10px; }
+  .burger .icon:after  { top:  10px; }
+
+  /* Menu déroulant fermé */
+  .topnav ul { display: none; }
+
+  /* Menu déroulant ouvert (classe responsive) */
+  .topnav.responsive {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -4px 0 15px rgba(0,0,0,0.15);
+    z-index: 10000;
+    padding-top: 60px;
+  }
+
+  .topnav.responsive ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  .topnav.responsive ul li {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  /* Couleurs dégradées comme le menu PC */
+  .topnav.responsive ul li:nth-child(1) { background-color: #FF5E00; }
+  .topnav.responsive ul li:nth-child(2) { background-color: #FF7B2E; }
+  .topnav.responsive ul li:nth-child(3) { background-color: #FF985C; }
+  .topnav.responsive ul li:nth-child(4) { background-color: #FFAF81; }
+  .topnav.responsive ul li:nth-child(5) { background-color: #FFD2B8; }
+
+  .topnav.responsive ul li a {
+    width: 100%;
+    padding: 0 20px;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  /* ── HEADER ── */
+  header {
+    height: auto;
+    padding: 15px 10px;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 60px; /* évite le chevauchement avec le burger */
+  }
+
+  header img { height: 80px; }
+
+  #texte1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  /* ── BODY ── */
+  body {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* ── BLOC CONTENU (image + texte côte à côte → empilés) ── */
+  .bloc {
+    flex-direction: column;
+  }
+
+  .test1 {
+    width: 100%;
+    font-size: 16px;
+    padding: 15px 5px;
+  }
+
+  .test2 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .test2 img {
+    max-height: 300px;
+    object-fit: contain;
+  }
+
+  /* ── FOOTER ── */
+  footer { padding: 10px; }
+
+  .footer_contenu {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footer_logo img { width: 100px; }
+
+  .footer_logos img { width: 50px; }
+
+  /* ── NAV (reset mobile) ── */
+  nav {
+    width: 100%;
+    position: relative;
+    margin: 0;
+  }
+
+  nav ul li {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* ── TABLETTE (768px → 1024px) ── */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+  body {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  header img { height: 100px; }
+
+  #texte1 { font-size: 35px; }
+
+  /* Bloc contenu : image plus petite sur tablette */
+  .test1 { width: 65%; font-size: 17px; }
+  .test2 { width: 35%; }
+
+  /* Menu PC garde le même style mais plus compact */
+  nav ul li { height: 45px; }
+  nav a { font-size: 13px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
