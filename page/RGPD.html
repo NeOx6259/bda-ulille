@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Rémi et Chloé</title>
+    <link rel="stylesheet" href="../styles/styleV2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="Bureau Des Art de l'Université de Lille">
+    <meta name="author" content="BDA">
+    <meta name="description" content="Bureau Des Art de l'Université de Lille">
+    <link rel="icon" type="image/png" href="../icon/logo_noir_2.png" />
+</head>
+<body id="retour">
+<div class="conteneur">
+
+
+
+    <header>
+        <img src="../img/LOGO 2025 peche.png" alt="Logo BDA">
+        <p id="texte1" style="color: #FDA076">Bureau Des Art de l'Université de Lille</p>
+    </header>
+
+    <div class="logo-menu">
+
+        <nav class="menu_pc" style="">
+            <ul >
+                <li style="background-color: #FF5E00" >
+                    <a href="../index.html">Accueil</a>
+                </li>
+                <li style="background-color: #FF7B2E">
+                    <a href="Agenda.html">Agenda</a>
+                </li>
+                <li style="background-color: #FF985C">
+                    <a href="Contact.html">Contact</a>
+                </li>
+                <li style="background-color: #FFAF81">
+                    <a href="Actualite.html">Actualités</a>
+                </li>
+                <li style="background-color: #FFD2B8">
+                    <a href="RGPD.html">Rejoins nous !</a>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+
+    <div class="non_menu">
+
+        <nav onclick="burger()" id="myTopnav" class="topnav">
+
+            <ul >
+                <li style="background-color: #BF3F39" >
+                    <a href="../index.html">Accueil</a>
+                </li>
+                <li style="background-color: aqua">
+                    <a href="Agenda.html">Agenda</a>
+                </li>
+                <li>
+                    <a href="Contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="Actualite.html">Actualités</a>
+                </li>
+                <li>
+                    <a href="RGPD.html">contact</a>
+                </li>
+            </ul>
+            <a href="javascript:void(0);" class="burger"><i class="icon"></i></a>
+
+        </nav>
+    </div>
+    <br>
+
+
+    <div>
+        <iframe id="haWidget" allow="payment 'self' https://paymenthub.helloassopay.com/ https://helloasso.com/" allowtransparency="true" scrolling="auto" src="https://www.helloasso.com/associations/lambda-bureau-des-arts-de-l-universite-de-lille/adhesions/adhesion-2026-2027/widget" style="width: 100%; height: 750px; border: none;" onload="window.addEventListener('message', function(e) { const dataHeight = e.data.height; const haWidgetElement = document.getElementById('haWidget');
+  if (dataHeight > parseFloat(haWidgetElement.height || 0)) { haWidgetElement.height = dataHeight + 'px';}})"></iframe>
+    </div>
+
+
+
+    <footer>
+        <div class="footer_contenu">
+
+            <!-- Logo principal -->
+            <div class="footer_logo">
+                <img src="../img/LOGO 2025 blancpng.png" alt="Logo BDA">
+            </div>
+
+            <!-- Coordonnées -->
+            <div class="footer_infos">
+                <p>Université de Lille</p>
+                <p>Adresse : Avenue Carl Gauss, Villeneuve-d'Ascq, France, 59650</p>
+                <p>
+                    <a href="mailto:contact@bda-ulille.org" target="_blank">
+                        contact@bda-ulille.org
+                    </a>
+                </p>
+            </div>
+
+            <!-- Deux autres logos -->
+            <div class="footer_logos">
+                <a href="https://www.instagram.com/bda.lambda/" target="_blank"><img src="../img/insta.png" alt="Logo 1"></a>
+                <a href="https://discord.gg/KCdhye6MWU" target="_blank"><img src="../img/discord.png" alt="Logo 1"></a>
+            </div>
+
+        </div>
+    </footer>
+</div>
+<script>
+    function burger() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += "responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+
+
+</body>
+</html>
