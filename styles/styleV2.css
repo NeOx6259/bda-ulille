@@ -1,0 +1,766 @@
+@charset "utf-8";
+
+*
+{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin:0px;  /* fixe la marge extérieur a 0*/
+  font-family: Arial;
+
+}
+
+
+.burger{
+  display: none; /* display none fait siparraitre un élement */
+}
+
+.conteneur {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+/*header*/
+header {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+header img {
+  width: auto;
+  height: 140px;
+}
+
+#texte1 {
+  font-size: 50px;
+  color: #000000;
+  font-family: Arial;
+  text-align: center;
+}
+#logo {
+  text-align: left; /* text-align permet de positionner un bloc horizontalement*/
+  width: 10%
+}
+
+
+/*body*/
+body  {
+
+  background: #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size:cover; /* couvre toute la page */
+  height: 100%;
+  padding-left:50px;  /* fixe la marge interieur a 0*/
+  padding-right:50px;
+}
+
+/*nav PC*/
+.non_menu{
+  display: none;
+}
+.logo-menu {
+  text-align: center;
+  line-height: 0;
+  margin-top: 5px;
+}
+
+.logo-menu img {
+  width: 15%;
+  display: block;
+  margin: 0 auto;
+}
+
+.logo-menu nav {
+  margin: 0;
+}
+
+
+nav {
+  width: 100%;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  font-weight: bold;
+
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;          /* Remplace float: left */
+  margin: 0;
+  padding: 0px;
+  overflow: visible;
+}
+
+nav > ul > li:first-child {
+  border-radius: 15px 0 0 15px;
+}
+
+nav > ul > li:last-child {
+  border-radius: 0 15px 15px 0;
+}
+
+nav ul li {
+  flex: 1;                /* Remplace width: 16.6% — chaque élément prend la même place */
+  text-align: center;
+  position: relative;
+
+}
+
+
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  border-bottom: 2px solid transparent;
+  padding: 10px 0px;
+  width: 100%;      /* prend toute la largeur du li */
+  height: 100%;     /* prend toute la hauteur du li */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+nav li {
+
+  height: 50px;
+
+}
+nav  a:hover {
+  color: #FFFFFF;
+}
+.sous{
+  display: none;
+  background-color: grey;
+  z-index: 10000;
+  width: 100%;
+  position: absolute;
+
+}
+
+
+nav > ul li:hover .sous {
+  display: block;
+}
+
+
+.sous li{
+  float: none;
+  width: 100%;
+  text-align: left;
+  border-right: none;
+}
+.sous a{
+  border-bottom: none;
+  padding: 10px;
+
+}
+.sous a:hover{
+  border-bottom: none;
+
+}
+
+
+
+.tabulation{
+  text-align: center;
+  font-size: 18px;
+  color: #FFFFFF;
+  font-family: 'robotolight';
+
+}
+.class1{
+
+}
+.img_centrer{
+  width: 20%; /* Ajuste la largeur pour que 5 images tiennent sur une ligne */
+  height: auto;
+  margin: 0; /* Supprime toute marge */
+  padding: 0; /* Supprime tout padding */
+  border: none; /* Supprime toute bordure éventuelle */
+  margin-top: 25px;
+
+
+}
+.timeline{
+  width: 75%; /* Ajuste la largeur pour que 5 images tiennent sur une ligne */
+  height: auto;
+   /* Supprime toute marge */
+  padding: 0; /* Supprime tout padding */
+   /* Supprime toute bordure éventuelle */
+  margin-top: 25px;
+  margin-left: 12.5% ;
+}
+.test{
+  border: solid;
+}
+.FAQ{
+  margin: auto;
+  margin-top: 25px;
+  text-align: center;
+}
+.Question{
+  font-size: 30px; /* grandeur écriture*/
+  color: #BF3F39; /* couleur police*/
+  font-family: 'Brush Script MT';
+
+}
+.img_75{
+  width: 50%; /* Ajuste la largeur pour que 5 images tiennent sur une ligne */
+  height: auto;
+  display: block;
+  margin: auto; /* Supprime toute marge */
+  margin-top: 25px;
+}
+
+.Reponse{
+  display: none;
+  color: #BF3F39; /* couleur police*/
+
+
+}
+.FAQ:hover .Reponse{
+  display: block;
+
+}
+.bloc {
+  display: flex;
+  width: 100%;
+}
+
+.test1{
+  width: 75%;
+  font-size: 20px;
+  line-height: 1.8;
+  display: flex;
+
+  align-items: center;
+  text-align: justify;
+}
+
+.test1 {
+  padding: 20px;
+
+}
+.test1 span{
+  text-align: center;
+}
+
+.test2 {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.test2 img {
+  width: 100%;
+  height: auto;
+}
+
+.form{
+  width: 100%;
+  height: 650px;
+  margin: 0;
+  border: 0;
+
+}
+.Liens{
+  text-decoration:none; /* enlève le soulignement */
+  color: #BF3F39;
+  border-bottom: 2px solid transparent;
+  font-weight: bold;
+}
+
+
+
+/*footer*/
+footer {
+  margin-top: auto;
+  width: 100%;
+  background-color: #FFAC81;
+  color: #BF3F39;
+}
+
+.footer_contenu {
+
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo principal */
+.footer_logo img {
+  width: 150px;
+  height: auto;
+
+}
+
+/* Informations */
+.footer_infos {
+  text-align: center;
+}
+
+.footer_infos p {
+  margin: 8px 0;
+}
+
+.footer_infos a {
+  color: #BF3F39;
+  text-decoration: none;
+}
+
+/* Les deux autres logos */
+.footer_logos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.footer_logos img {
+  width: 75px;
+  height: auto;
+}
+
+
+
+
+
+
+/* =====================================================
+   SMARTPHONE UNIQUEMENT
+   Le menu PC n'est PAS modifié
+   ===================================================== */
+
+@media screen and (max-width: 768px) {
+
+  /* Cache le menu PC */
+  .menu_pc {
+    display: none !important;
+  }
+
+  /* Affiche le menu téléphone */
+  .non_menu {
+    display: block !important;
+  }
+
+  /* NAV MOBILE */
+  .topnav {
+    position: relative !important;
+    width: 100% !important;
+    height: 0;
+    z-index: 9999;
+  }
+
+
+  /* =====================================================
+     BOUTON BURGER
+     ===================================================== */
+
+  .burger {
+    display: flex !important;
+
+    position: fixed !important;
+
+    top: 15px;
+    right: 15px;
+
+    width: 45px;
+    height: 45px;
+
+    background: white;
+
+    border-radius: 8px;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99999;
+
+    cursor: pointer;
+
+    text-decoration: none;
+  }
+
+
+  .burger .icon,
+  .burger .icon::before,
+  .burger .icon::after {
+
+    content: "";
+
+    display: block;
+
+    width: 30px;
+    height: 4px;
+
+    background: #FF5E00;
+
+    border-radius: 5px;
+
+    position: absolute;
+  }
+
+  .burger .icon::before {
+    top: -10px;
+  }
+
+  .burger .icon::after {
+    top: 10px;
+  }
+
+
+  /* =====================================================
+     MENU FERMÉ
+     ===================================================== */
+
+  .topnav > ul {
+    display: none !important;
+  }
+
+
+  /* =====================================================
+     MENU OUVERT
+     ===================================================== */
+
+  .topnav.responsive {
+    height: auto !important;
+  }
+
+  .topnav.responsive > ul {
+
+    display: flex !important;
+
+    position: fixed;
+
+    top: 75px;
+    left: 10px;
+
+    width: calc(100% - 20px);
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    flex-direction: row;
+
+    list-style: none;
+
+    border-radius: 12px;
+
+    overflow: visible;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+
+    background: white;
+
+    z-index: 99998;
+  }
+
+
+  /* =====================================================
+     LES 5 BOUTONS
+     ===================================================== */
+
+  .topnav.responsive > ul > li {
+
+    position: relative;
+
+    flex: 1;
+
+    height: 55px;
+
+    width: auto !important;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0;
+
+    padding: 0;
+  }
+
+
+  /* Premier bouton */
+  .topnav.responsive > ul > li:first-child {
+    border-radius: 12px 0 0 12px;
+  }
+
+  /* Dernier bouton */
+  .topnav.responsive > ul > li:last-child {
+    border-radius: 0 12px 12px 0;
+  }
+
+
+  /* =====================================================
+     TEXTE DES BOUTONS
+     ===================================================== */
+
+  .topnav.responsive > ul > li > a {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 55px;
+
+    padding: 5px;
+
+    color: black;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    text-align: center;
+  }
+
+
+  .topnav.responsive > ul > li > a:hover {
+    color: white;
+  }
+
+
+  /* =====================================================
+     SOUS-MENU ÉVÉNEMENT
+     ===================================================== */
+
+  .topnav.responsive .sous {
+
+    display: none;
+
+    position: absolute;
+
+    top: 55px;
+    left: 0;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    flex-direction: column;
+
+    background: #FFAF81;
+
+    list-style: none;
+
+    border-radius: 0 0 10px 10px;
+
+    overflow: hidden;
+
+    z-index: 100000;
+  }
+
+
+  /* Affiche le sous-menu quand on passe dessus */
+  .topnav.responsive > ul > li:hover > .sous {
+    display: flex;
+  }
+
+
+  .topnav.responsive .sous li {
+
+    width: 100%;
+
+    height: auto;
+
+    min-height: 45px;
+
+    display: block;
+
+    background: #FFAF81 !important;
+  }
+
+
+  .topnav.responsive .sous a {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    min-height: 45px;
+
+    padding: 8px;
+
+    color: black;
+
+    font-size: 12px;
+
+    text-decoration: none;
+  }
+
+
+  .topnav.responsive .sous a:hover {
+    color: white;
+    background: rgba(255,255,255,0.15);
+  }
+
+
+  /* =====================================================
+     HEADER
+     ===================================================== */
+
+  header {
+
+    height: auto;
+
+    padding: 15px 65px 15px 10px;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  header img {
+    height: 80px;
+    width: auto;
+  }
+
+  #texte1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+
+  /* =====================================================
+     CONTENU
+     ===================================================== */
+
+  body {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .bloc {
+    flex-direction: column;
+  }
+
+  .test1 {
+    width: 100%;
+    font-size: 16px;
+    padding: 15px 5px;
+  }
+
+  .test2 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .test2 img {
+    max-height: 300px;
+    object-fit: contain;
+  }
+
+
+  /* =====================================================
+     FOOTER
+     ===================================================== */
+
+  footer {
+    padding: 10px;
+  }
+
+  .footer_contenu {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footer_logo img {
+    width: 100px;
+  }
+
+  .footer_logos img {
+    width: 50px;
+  }
+
+
+  .formulaires-google {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formulaires-google iframe {
+    width: 100% !important;
+    height: 1450px;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .formulaires-google iframe + iframe {
+    margin-top: 20px;
+  }
+
+}
+
+
+
+/* ── TABLETTE (768px → 1024px) ── */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+  body {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  header img { height: 100px; }
+
+  #texte1 { font-size: 35px; }
+
+  /* Bloc contenu : image plus petite sur tablette */
+  .test1 { width: 65%; font-size: 17px; }
+  .test2 { width: 35%; }
+
+  /* Menu PC garde le même style mais plus compact */
+  nav ul li { height: 45px; }
+  nav a { font-size: 13px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
