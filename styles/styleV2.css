@@ -44,6 +44,12 @@ header img {
   font-family: Arial;
   text-align: center;
 }
+#titre_page {
+  font-size: 30px;
+  color: #FDA076;
+  font-family: Arial;
+  text-align: left;
+}
 #logo {
   text-align: left; /* text-align permet de positionner un bloc horizontalement*/
   width: 10%
